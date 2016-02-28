@@ -10,7 +10,7 @@ public class MarathonMovement : MonoBehaviour {
 	float sleepTime = 2f;
 	float sleepTimeElapsed = 0;
 
-	float runningTime = 5f;
+	float runningTime = 15f;
 	float runningTimeElapsed = 0;
 
 	bool running;

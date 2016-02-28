@@ -9,7 +9,7 @@ public class Street : MonoBehaviour {
 
 	public int runnerCount = 5;
 
-	float streetBlockDistance = 74;
+	float streetBlockDistance = 75;
 	float nextPositionToMove;
 	int currentStreetBlock;
 

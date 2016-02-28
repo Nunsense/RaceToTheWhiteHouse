@@ -22,16 +22,20 @@ public class CarMovement : MonoBehaviour {
 		pos = transform.localPosition;
 		movingTimeElapsed += Time.deltaTime;
 
+		pos.x = Mathf.Lerp(pos.x, nextTarget, movingTimeElapsed / movingTime);
+
 		if (movingTimeElapsed > movingTime) {
 			movingTimeElapsed = 0;
+
+			pos.x = nextTarget;
 			nextTarget = (nextTarget == min) ? max : min; 
+
 			Vector3 rotation = transform.eulerAngles;
 			rotation.y += 180;
 			transform.eulerAngles = rotation;
 			movingTime = Random.Range(movingTimeAvg - 1f, movingTimeAvg + 1f);
 		}
 
-		pos.x = Mathf.Lerp(pos.x, nextTarget, movingTimeElapsed / movingTime);
 		transform.localPosition = pos;
 	}
 }

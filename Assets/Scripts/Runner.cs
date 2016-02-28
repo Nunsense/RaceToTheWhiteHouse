@@ -4,8 +4,8 @@ using System.Collections;
 public class Runner : MonoBehaviour {
 
 	Rigidbody body;
-	float originalSpeed = 200f;
-	float speed = 200f;
+	float originalSpeed = 300f;
+	float speed = 300f;
 	float sideSpeed = 0f;
 	bool jumping;
 
@@ -23,6 +23,10 @@ public class Runner : MonoBehaviour {
 	}
 
 	void Start() {
+		Vector3 pos = transform.position;
+		pos.y = Random.Range(pos.y, pos.y + 1f);
+		transform.position = pos;
+
 		jumping = false;
 	}
 	
