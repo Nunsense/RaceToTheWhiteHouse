@@ -1,0 +1,105 @@
+fileFormatVersion: 2
+guid: 94e0bfbe8663047e999b50434292aa03
+timeCreated: 1456672407
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: streets_0
+    21300002: streets_1
+    21300004: streets_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: streets_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1175
+        width: 1500
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -750, y: 162.5}
+        - {x: -750, y: -162.5}
+        - {x: 750, y: -162.5}
+        - {x: 750, y: 162.5}
+    - name: streets_1
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 0
+        width: 1120
+        height: 1123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -560, y: 561.5}
+        - {x: -560, y: -561.5}
+        - {x: 560, y: -561.5}
+        - {x: 560, y: 561.5}
+    - name: streets_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 375
+        height: 1120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -187.5, y: 560}
+        - {x: -187.5, y: -560}
+        - {x: 187.5, y: -560}
+        - {x: 187.5, y: 560}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

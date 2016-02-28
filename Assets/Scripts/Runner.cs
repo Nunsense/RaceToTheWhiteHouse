@@ -35,14 +35,14 @@ public class Runner : MonoBehaviour {
 //
 //		transform.position = pos;
 
-		if (bonusTimeToFinish > 0) {
-			bonusTimeToFinish -= Time.deltaTime;
-
-			if (bonusTimeToFinish < 0) {
-				speed = originalSpeed;
-			}
-		}
-
+//		if (bonusTimeToFinish > 0) {
+//			bonusTimeToFinish -= Time.deltaTime;
+//
+//			if (bonusTimeToFinish < 0) {
+//				speed = originalSpeed;
+//			}
+//		}
+//
 		if (transform.position.z - lastZ < 5) {
 			isStuck = true;
 		} 
@@ -60,7 +60,7 @@ public class Runner : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision col) {
-		if (col.contacts[0].point.y - 0.3f < transform.position.y) {
+		if (col.gameObject.tag == "Ground" && col.contacts[0].point.y - 0.1f < transform.position.y) {
 			jumping = false;
 			body.AddForce(new Vector3(sideSpeed, 300, speed));
 
@@ -70,9 +70,8 @@ public class Runner : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col) {
 		if (col.tag == "Bonus") {
-			speed += col.GetComponent<Bonus>().speedBonus;
+			body.AddForce(new Vector3(0, 0, col.GetComponent<Bonus>().speedBonus));
 			col.gameObject.SetActive(false);
-			bonusTimeToFinish = bonusTime;
 		}
 	}
 }

@@ -7,7 +7,9 @@ public class Street : MonoBehaviour {
 	public GameObject runnerPrefab;
 	public Transform camera;
 
-	float streetBlockDistance = 50;
+	public int runnerCount = 5;
+
+	float streetBlockDistance = 74;
 	float nextPositionToMove;
 	int currentStreetBlock;
 
@@ -26,12 +28,13 @@ public class Street : MonoBehaviour {
 			streetBlocks[i] = block.GetComponent<StreetBlock>();
 		}
 
-		runners = new Runner[5];
-		float initRunnerZ = -4.5f;
+		runners = new Runner[runnerCount];
+		float initRunnerX = -8f;
+		float runntXdiff = 16f / runners.Length;
 		for (int i = 0; i < runners.Length; i++) {
 			GameObject runner = GameObject.Instantiate(runnerPrefab);
 			runner.transform.parent = transform;
-			runner.transform.position = new Vector3(initRunnerZ + (2f * i), 1, 10);
+			runner.transform.position = new Vector3(initRunnerX + (runntXdiff * i), 1, 10);
 			runners[i] = runner.GetComponent<Runner>();
 		}
 	}
